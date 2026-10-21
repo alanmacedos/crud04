@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Democrati - vote</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <main>
+
+        <div id="divVote">
+
+            <h1>DEMOCRATI</h1>
+
+            <p>Sua urna digital</p>
+
+            <form id="form">
+
+                <label for="name">Nome completo</label>
+                <input id="name" type="text" required>
+
+                <label for="vote">Voto</label>
+                <select id="vote" required>
+
+                    <option value="" selected disabled>Selecione seu candidato</option>
+                    <option value="13">Lula - 13</option>
+                    <option value="22">Bolsonaro - 22</option>
+
+                </select>
+                
+                <button id="submit" type="submit">Confirma</button>
+
+            </form>
+
+        </div>
+
+        <div id="divResults">
+
+            <div id="divLula">
+
+                <h1>Lula - 13</h1>
+
+                <ul id="lula"></ul>
+
+            </div>
+
+            <div id="divBolsonaro">
+
+                <h1>Bolsonaro - 22</h1>
+
+                <ul id="bolsonaro"></ul>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <script type="module" src="./main.js"></script>
+    
+</body>
+</html>
