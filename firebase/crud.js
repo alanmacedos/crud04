@@ -21,14 +21,14 @@ async function edit(id, name, vote) {
     await update(itemRef, {name, vote});
 }
 
-async function remove(id) {
+async function removeData(id) {
     const itemRef = child(votesRef, id);
     await remove(itemRef);
 }
 
 async function searchAll() {
     const snapshot = await get(votesRef);
-    return snapshot.exits() ? snapshot.val() : {};
+    return snapshot.exists() ? snapshot.val() : {};
 }
 
-export { save, edit, remove, searchAll };
+export { save, edit, removeData, searchAll };
